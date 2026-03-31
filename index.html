@@ -1,19 +1,235 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Demo Konflik</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- CSS sendiri -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="container text-center mt-5">
-    <h1 class="judul">Hello World</h1>
-    <h1 class="judul">Hello dari fitur simsalabim</h1>
-  </div>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Premium Tactical Gear & Firearms" />
+        <meta name="author" content="Nexus Tactical" />
+        <title>Nexus Tactical Armory</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <style>
+            :root {
+                --bs-primary: #556b2f; /* Olive Drab Green */
+                --bs-primary-rgb: 85, 107, 47;
+                --bs-dark: #121212;
+            }
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+            h1, h2, h3, h4, h5, h6, .text-uppercase {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                color: #f5f5f5;
+                letter-spacing: 1px;
+            }
+            .text-muted {
+                color: #a0a0a0 !important;
+            }
+            .text-primary {
+                color: #7b8d42 !important; /* Lighter olive for text visibility */
+            }
+            .btn-primary {
+                background-color: #556b2f;
+                border-color: #4b5320;
+                color: #fff;
+                border-radius: 0; /* Boxy tactical look */
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+                background-color: #3b4d20 !important;
+                border-color: #2e3d17 !important;
+            }
+            #mainNav {
+                background-color: #121212 !important;
+                border-bottom: 2px solid #556b2f;
+            }
+            /* Dark Masthead with Gun/Tactical Background */
+            header.masthead {
+                background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('https://images.unsplash.com/photo-1595590424283-b8f1784cb2c8?q=80&w=1920&auto=format&fit=crop');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            header.masthead .masthead-subheading {
+                font-family: 'Roboto Slab', serif;
+                font-style: normal;
+                color: #7b8d42;
+            }
+            .page-section {
+                background-color: #1a1a1a;
+            }
+            .bg-light {
+                background-color: #121212 !important; /* Darken the light backgrounds */
+            }
+            /* Portfolio Customization */
+            .portfolio-item .portfolio-caption {
+                background-color: #222 !important;
+                border-top: 3px solid #556b2f;
+            }
+            .portfolio-item .portfolio-hover {
+                background-color: rgba(85, 107, 47, 0.9) !important;
+            }
+            /* Team Customization */
+            .team-member img {
+                border: 5px solid #556b2f;
+            }
+            /* Timeline Customization */
+            .timeline-image {
+                border: 7px solid #222 !important;
+                background-color: #556b2f !important;
+            }
+            /* Form Inputs */
+            .form-control {
+                background-color: #2a2a2a;
+                border: 1px solid #444;
+                color: #fff;
+                border-radius: 0;
+            }
+            .form-control:focus {
+                background-color: #333;
+                border-color: #556b2f;
+                color: #fff;
+                box-shadow: 0 0 0 0.25rem rgba(85, 107, 47, 0.25);
+            }
+            footer {
+                background-color: #0a0a0a;
+                color: #888;
+            }
+            /* Modal Customization */
+            .modal-content {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+                border: 1px solid #333;
+            }
+            .close-modal img {
+                filter: invert(1);
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase" style="font-weight: 900; letter-spacing: 2px;" href="#page-top">
+                    <i class="fas fa-crosshairs text-primary me-2"></i>NEXUS TACTICAL
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Armory</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Instructors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Premium Firearms & Tactical Gear</div>
+                <div class="masthead-heading text-uppercase">Lock and Load</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">View Catalog</a>
+            </div>
+        </header>
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Expertise</h2>
+                    <h3 class="section-subheading text-muted">Equipping professionals and enthusiasts alike.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-person-rifle fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Firearms</h4>
+                        <p class="text-muted">Wide selection of handguns, rifles, and shotguns from top-tier manufacturers for defense and sport.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shield-halved fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Tactical Gear</h4>
+                        <p class="text-muted">Plate carriers, holsters, and heavy-duty apparel designed for extreme environments and high mobility.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-binoculars fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Optics & Accessories</h4>
+                        <p class="text-muted">Precision scopes, red dot sights, and weapon lights to guarantee maximum accuracy in any situation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">The Armory</h2>
+                    <h3 class="section-subheading text-muted">Explore our featured inventory.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-crosshairs fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1595590424283-b8f1784cb2c8?q=80&w=600&h=450&fit=crop" alt="Assault Rifle" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">AR-15 Platforms</div>
+                                <div class="portfolio-caption-subheading text-muted">Modern Sporting Rifles</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-crosshairs fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1584284414574-72b22cb7c7cd?q=80&w=600&h=450&fit=crop" alt="Handgun" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Glock 19 Gen 5</div>
+                                <div class="portfolio-caption-subheading text-muted">Concealed Carry</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-crosshairs fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1611003460455-d143c7b808da?q=80&w=600&h=450&fit=crop" alt="Ammunition" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Bulk Ammunition</div>
+                                <div class="portfolio-caption-subheading text-muted">9mm & 5.56 NATO</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
